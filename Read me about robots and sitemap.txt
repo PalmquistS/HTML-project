@@ -1,0 +1,5 @@
+Min robots.txt är tom eftersom jag saknar en domän och sidan inte är skarp men som seo-guide.se skriver, 
+"Det är alltid rekommenderat att du har en sådan fil även om den är tom (tillåt allt)
+eftersom sökmotorerna kommer att förfrågningar efter den."
+
+Jag har inte heller kunnat generera en sitemap eftersom domänen saknas.
