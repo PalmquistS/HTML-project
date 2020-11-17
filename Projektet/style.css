@@ -1,0 +1,279 @@
+/* All pages */
+body {
+  background-color: rgb(253, 253, 253);
+}
+
+/* Grid main page */
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "top top top top top top top top top top top top"
+    "left left right right right right right right right right right right"
+    "bottom bottom bottom bottom bottom bottom bottom bottom bottom bottom bottom bottom";
+}
+
+/* Navbar all pages */
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  grid-area: top;
+  height: 50px;
+}
+.navbar > a {
+  text-align: center;
+  width: 100px;
+  height: 30px;
+  margin: 5px;
+  padding: 5px;
+  border: solid black 1px;
+  border-radius: 15px;
+  background-color: rgb(244, 250, 250);
+}
+.navbar > a:hover {
+  background-color: rgb(145, 167, 167);
+}
+
+/* Company main page */
+main {
+  grid-area: right;
+  padding-left: 5px;
+}
+.about-company img {
+  width: 80%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.about-company h1 {
+  color: rgb(12, 75, 12);
+}
+/* News main page */
+article {
+  border: solid black 1px;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+.news {
+  grid-area: left;
+  display: flex;
+  flex-direction: column;
+}
+.news img {
+  max-width: 100%;
+  padding-right: 5px;
+}
+
+/* Footer all pages */
+.footer {
+  grid-area: bottom;
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
+.links {
+  align-self: flex-end;
+  padding-left: 30px;
+}
+.links img {
+  width: 40px;
+  height: auto;
+}
+.links img:hover {
+  width: 45px;
+  height: auto;
+}
+
+/* Contact page */
+fieldset {
+  width: 400px;
+  height: 600px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+}
+fieldset {
+  display: flex;
+  flex-direction: column;
+}
+#name {
+  width: 70%;
+  margin-bottom: 10px;
+}
+#email {
+  width: 70%;
+  margin-bottom: 10px;
+}
+#department {
+  width: 50%;
+  margin-bottom: 10px;
+}
+#comments-id {
+  height: 100%;
+}
+fieldset p {
+  text-align: end;
+  color: red;
+}
+#button {
+  width: 25%;
+  align-self: flex-end;
+}
+
+/* Employee page */
+#employee-header {
+  text-align: center;
+}
+.employee {
+  display: flex;
+  flex-wrap: wrap;
+}
+.employee div {
+  box-sizing: border-box;
+  width: 350px;
+  padding: 5px;
+  margin: 5px;
+  border: solid black 2px;
+}
+.employee1 > h2,
+.employee2 > h2,
+.employee3 > h2,
+.employee4 > h2,
+.employee5 > h2,
+.employee6 > h2 {
+  text-align: center;
+}
+.employee1 > img,
+.employee2 > img,
+.employee3 > img,
+.employee4 > img,
+.employee5 > img,
+.employee6 > img {
+  display: block;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.employee1 {
+  order: 2;
+}
+.employee2 {
+  order: 3;
+}
+.employee3 {
+  order: 4;
+}
+.employee4 {
+  order: 6;
+}
+.employee5 {
+  order: 1;
+}
+.employee6 {
+  order: 5;
+}
+
+/* Cycle page */
+.picture-bicycle img,
+.success img,
+.training img,
+.year img {
+  width: 100%;
+}
+.team,
+.success p,
+.training p,
+.year p {
+  width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  /* Grid main page */
+  .grid-container {
+    display: grid;
+    grid-template-areas:
+      "top"
+      "right"
+      "left"
+      "bottom";
+  }
+
+  /* Navbar all pages */
+  .navbar {
+    grid-area: top;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: auto;
+  }
+  .navbar > a {
+    width: 100%;
+    border-radius: 0px;
+    height: 20px;
+    margin: 0px;
+  }
+  /* Company main page */
+  .about-company img {
+    width: 100%;
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+
+  /* Gallery page  */
+  .employee {
+    justify-content: space-around;
+  }
+
+  /* Cycle page  */
+  .picture2 {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  /* News main page */
+  .news {
+    margin-top: 130px;
+  }
+
+  /* Cycle page */
+  .picture1 {
+    display: none;
+  }
+  .success img,
+  .training img,
+  .year img {
+    display: block;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .team,
+  .success p,
+  .training p,
+  .year p {
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+  .success h2,
+  .training h2,
+  .year h2 {
+    margin-left: 15%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  /* All pages */
+  body {
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* News main page */
+  .news img {
+    float: left;
+    max-width: 60%;
+  }
+}
